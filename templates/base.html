@@ -15,7 +15,9 @@
 
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato&display=swap">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet"> 
         <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
@@ -36,16 +38,16 @@
   </head>
   <body>
     <header class="container-fluid fixed-top">
-      <div id= "topnav" class= "row bg-muted pt-lg-2 d-none d-lg-flex">
+      <div id= "topnav" class= "row bg-white pt-lg-2 d-none d-lg-flex">
         <div class= "col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
           <a href= "{%url 'home' %}" class= "nav-link main-logo-link">
-            <h2 class= "logo-font text-white my-0"><strong>GoFIT</strong></h2>
+            <h2 class= "logo-font text-black my-0"><strong><b>GoFIT</b></strong></h2>
           </a>
         </div>
         <div class= "col-12 col-lg-6 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown">
-                <a class="text-white nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <div class="text-center">
                         <div><i class="fas fa-user fa-lg"></i></div>
                         <p class="my-0">My Account</p>
@@ -65,7 +67,7 @@
                 </div>
             </li>
             <li class="list-inline-item">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-white{% endif %} nav-link" href="">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
                   <div class="text-center">
                       <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                       <p class="my-0">
@@ -80,6 +82,20 @@
             </li>
           </ul>
         </div>
+      </div>
+      <div class="row bg-white">
+        <nav class="navbar navbar-expand-lg navbar-light w-100">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            {% include 'includes/mobiletop-header.html' %}
+            {% include 'includes/mainnav.html' %}
+        </nav>
+      </div>
+      <div id="promo-banner" class="row text-center">
+          <div class="col bg-black">
+              <h4 class="bannerTop my-1">Join Now and Get a months worth of Healthy Protein Supplies for FREE!!!</h4>                
+          </div>            
       </div>
     </header>
 
