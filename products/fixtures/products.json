@@ -1,0 +1,1 @@
+[{"pk": 1, "model": "products.product", "fields": {"sku": "pp5001340155", "name": "Turkey Chili", "description": "Red bell pepper, yellow onion,  sweet corn, ground turkey mild chili powder, cumin, dried oregano, cayenne pepper, salt, crushed tomatoes and chicken broth, red kidney beans ", "price": 4.99, "category": 3, "rating": 4.8, "image": "DP0709201205510679M.jpg"}}]
