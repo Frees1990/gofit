@@ -6,7 +6,7 @@ body {
     background: url('/media/gym.jpg') no-repeat center center fixed;
     background-size: cover;
     height: 70vh;
-    color: #cac3c3;
+    color: black;
     font-family: "Playfair", sans-serif;
     font-weight: 400;
 }
@@ -21,6 +21,7 @@ body {
 
 .logo-font {
     letter-spacing: 5px;
+    font-weight: 800;
 }
 .bannerTop {
     font-size: medium;
@@ -71,13 +72,17 @@ body {
     top: 0;
     left: 0;
     position: fixed;
-    background: whitesmoke;
+    background: white;
     z-index: -1;
 }
 .card-img-top {
     height: 250px;
     width: 300px;
-
+}
+.product_name{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: 600;
 }
 /* -------------------------------- Media Queries */
 
@@ -86,10 +91,13 @@ body {
   .container {
     max-width: 80%;
   }
+  .header-container {
+    padding-top: 300px;
+}
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
+@media (min-width: 992px) and (max-width:1999px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -97,8 +105,24 @@ body {
         left: 0;
         z-index: 1030;
     }
-
     .header-container {
-        padding-top: 164px;
+        padding-top: 280px;
+    }
+}
+@media (min-width: 600px) and (max-width: 992px) {
+    .header-container {
+        padding-top: 170px;
+    }
+    body{
+        height: calc(100vh - 160vh);
+    }
+}
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (min-width: 200px) and (max-width: 600px){
+    .header-container {
+        padding-top: 160px;
+    }
+    body{
+        height: calc(100vh - 160vh);
     }
 }
