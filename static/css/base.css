@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: 70vh;
     color: #cac3c3;
-    font-family: "Anton", sans-serif;
+    font-family: "Playfair", sans-serif;
     font-weight: 400;
 }
 /* from Bulma */
@@ -65,7 +65,20 @@ body {
 .bg-black {
     background-color: #000 !important;
 }
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: whitesmoke;
+    z-index: -1;
+}
+.card-img-top {
+    height: 250px;
+    width: 300px;
 
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
