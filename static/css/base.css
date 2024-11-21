@@ -18,7 +18,6 @@ body {
     height: 1.5rem;
     width: 1.5rem;
 }
-
 .logo-font {
     letter-spacing: 5px;
     font-weight: 800;
@@ -75,9 +74,6 @@ body {
     background: white;
     z-index: -1;
 }
-.search-btn{
-    
-}
 .card-img-top {
     height: 250px;
     width: 300px;
@@ -100,7 +96,7 @@ body {
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) and (max-width:1600px) {
+@media (min-width: 992px) and (max-width:1200px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -137,22 +133,44 @@ body {
         font-size: large;
         font-weight: 600;
     }
+    .logo-font {
+        font-size: x-large;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
 }
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (min-width: 200px) and (max-width: 600px){
     .header-container {
-        padding-top: 160px;
+        padding-top: 170px;
     }
     body{
         height: calc(100vh - 160vh);
     }
+    .logo-font {
+        font-size: large;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
     .card-img-top {
-        height: 250px;
-        width: 300px;
+        height: 150px;
+        width: 200px;
+        margin-left: 15%;
     }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: large;
+        font-size: smaller;
+        text-align: center;
+    }
+    .lead{
+        font-size: smaller;
+        font-weight: 600;
+        text-align: center;
+    }
+    .bannerTop {
+        font-size: x-small;
+        font-style: normal;
+        color: yellow;
         font-weight: 600;
     }
 }
