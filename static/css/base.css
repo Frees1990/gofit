@@ -75,6 +75,9 @@ body {
     background: white;
     z-index: -1;
 }
+.search-btn{
+    
+}
 .card-img-top {
     height: 250px;
     width: 300px;
@@ -88,16 +91,16 @@ body {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
+    .container {
     max-width: 80%;
-  }
-  .header-container {
-    padding-top: 300px;
-}
+    }
+    .header-container {
+    padding-top: 160px;
+    }
 }
 
 /* fixed top navbar only on medium and up */
-@media (min-width: 992px) and (max-width:1999px) {
+@media (min-width: 992px) and (max-width:1600px) {
     .fixed-top-desktop-only {
         position: fixed;
         top: 0;
@@ -106,7 +109,16 @@ body {
         z-index: 1030;
     }
     .header-container {
-        padding-top: 280px;
+        padding-top: 200px;
+    }
+    .card-img-top {
+        height: 250px;
+        width: 300px;
+    }
+    .product_name{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+        font-weight: 600;
     }
 }
 @media (min-width: 600px) and (max-width: 992px) {
@@ -116,6 +128,15 @@ body {
     body{
         height: calc(100vh - 160vh);
     }
+    .card-img-top {
+        height: 250px;
+        width: 300px;
+    }
+    .product_name{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+        font-weight: 600;
+    }
 }
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (min-width: 200px) and (max-width: 600px){
@@ -124,5 +145,14 @@ body {
     }
     body{
         height: calc(100vh - 160vh);
+    }
+    .card-img-top {
+        height: 250px;
+        width: 300px;
+    }
+    .product_name{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+        font-weight: 600;
     }
 }
