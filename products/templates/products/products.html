@@ -13,9 +13,9 @@
     <div class="overlay"></div>
     <div class="container-fluid">
         <div class="row">
-            <div class="col text-center mt-3">
+            <div class="col text-center mt-5">
                 <h2 class="logo-font"><strong>GoFit Shop</strong></h2>
-                <div class="col-12 col-lg-6 offset-md-3">
+                <div class="col-12 col-lg-6 offset-md-3 mt-3 mb-3">
                     <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
                             <input class="form-control border border-black rounded-0 text-center" type="text" name="q" placeholder="Search our healthy options">
@@ -29,8 +29,27 @@
                         </div>
                     </form>
                 </div>
-                <hr class="w-50 mb-1">
+                <hr class="w-80 mb-3">
             </div>
+        </div>
+        <div class="col text-center dropdown mb-5">
+            <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Sort
+            </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                
+            <a class="btn btn-sm btn-secondary dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filter
+            </a>
+                <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
         </div>
         <div class="row">
             <div class="product-container col-10 offset-1">
