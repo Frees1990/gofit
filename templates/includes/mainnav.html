@@ -1,7 +1,7 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
-            <a class="logo-font nav-link text-secondary mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font nav-link text-secondary mr-5 {% if request.path == classes_url %}active{% endif %}" href="{% url 'classes' %}" id="classess" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Book Classes
             </a>
         </li>

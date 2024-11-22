@@ -37,6 +37,7 @@ body {
     background: black;
     color: white;
 }
+.sign-up-button
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -62,6 +63,17 @@ body {
     position: fixed;
     background: white;
     z-index: -1;
+}
+/*--------------------------------- Booking */
+.classsched {
+    margin-top: 5%;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 900;
+}
+/*--------------------------------- Products */
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
 }
 .card-img-top {
     height: 250px;
