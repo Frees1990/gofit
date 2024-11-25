@@ -67,7 +67,7 @@
                 </div>
             </li>
             <li class="list-inline-item">
-              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+              <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                   <div class="text-center">
                       <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                       <p class="my-0">
@@ -92,11 +92,19 @@
             {% include 'includes/mainnav.html' %}
         </nav>
       </div>
+      {% if products %}
+      <div id="promo-banner" class="row text-center">
+        <div class="col bg-black">
+            <h4 class="bannerTop my-1">FREE DELIVERY ON ORDERS OVER £50!!!</h4>                
+        </div>            
+      </div>
+      {% else %}
       <div id="promo-banner" class="row text-center">
           <div class="col bg-black">
-              <h4 class="bannerTop my-1">Join Now and Get a months worth of Healthy Protein Supplies for FREE!!!</h4>                
+              <h4 class="bannerTop my-1">Join Now and Get a months worth of Healthy Protein Supplies for FREE with FREE DELIVERY!!!</h4>                
           </div>            
       </div>
+      {% endif %}
     </header>
 
     {% if messages %}
