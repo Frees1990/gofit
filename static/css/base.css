@@ -37,14 +37,21 @@ body {
     background: black;
     color: white;
 }
-.sign-up-button
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+.sign-up-button,
+.sign-up-button:hover,
+.sign-up-button:active,
+.sign-up-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #222;
-    color: white;
+    background: black;
+    color: white !important;
 }
-
 .text-black {
     color: #000 !important;
 }
