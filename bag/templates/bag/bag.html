@@ -82,7 +82,7 @@
                                         <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}"><small>Remove</small></a>
                                     </td>
                                     <td class="py-3">
-                                        <p class="my-0">£{{ item.product.price }}</p>
+                                        <p class="my-0">£{{ item.product.price | calc_subtotal:item.quantity }}</p>
                                     </td>
                                 </tr>
                             {% endfor %}
@@ -154,9 +154,6 @@
         $.post(url, data)
             .done(function() {
                 location.reload();  // Reload the page on success
-            })
-            .fail(function() {
-                alert('Error removing item');  // Alert if there's an error
             });
     });
 </script>

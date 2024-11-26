@@ -51,6 +51,9 @@ def remove_from_bag(request, item_id):
         if item_id in bag:
             bag.pop(item_id)
 
+        else:
+            bag.pop(item_id)
+
         # Update the session with the modified bag
         request.session['bag'] = bag
         messages.success(request, "Item removed from bag!")
