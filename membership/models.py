@@ -4,7 +4,7 @@ from django.conf import settings
 class Membership(models.Model):
     name = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=10, decimal_places=2)
-    duration = models.PositiveIntegerField(help_text="Duration in days")
+    duration = models.PositiveIntegerField(help_text="Duration in months")
     description = models.TextField(blank=True, null=True)
 
     def __str__(self):
