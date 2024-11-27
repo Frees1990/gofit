@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True
 
 ALLOWED_HOSTS = ['gofit-d18fb7690928.herokuapp.com', 'localhost', '8000-frees1990-gofit-dbe9piu7cfe.ws-eu116.gitpod.io']
 
@@ -51,6 +51,7 @@ INSTALLED_APPS = [
     'bag',
     'checkout',
     'profiles',
+    'membership',
 
     #others
     'crispy_forms',
@@ -221,6 +222,8 @@ else:
     EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASS')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
+    print(os.environ.get('EMAIL_HOST_USER'))
+    print(os.environ.get('EMAIL_HOST_PASS'))
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

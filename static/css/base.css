@@ -52,6 +52,9 @@ body {
     background: black;
     color: white !important;
 }
+.logsign {
+    margin-right: 50%;
+}
 /* ------------------------------- bootstrap toasts */
 .message-container {
     position: fixed;
@@ -124,6 +127,15 @@ body {
     left: 0;
     position: fixed;
     background: white;
+    z-index: -1;
+}
+.backcolor{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: green;
     z-index: -1;
 }
 
