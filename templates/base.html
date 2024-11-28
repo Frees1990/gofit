@@ -4,7 +4,6 @@
 <html lang="en">
 
 <head>
-
   {% block meta %}
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="utf-8">
@@ -52,7 +51,7 @@
   <header class="container-fluid fixed-top">
     <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
       <div class="col-12 col-lg-6 my-auto py-1 py-lg-0 text-center text-lg-left">
-        <a href="{%url 'home' %}" class="nav-link main-logo-link">
+        <a href="{% url 'home' %}" class="nav-link main-logo-link">
           <h2 class="logo-font text-black my-0"><strong><b>GoFIT</b></strong></h2>
         </a>
       </div>
@@ -73,13 +72,32 @@
               {% endif %}
               <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
               <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-              {% else %}
-              <a href="{% url 'account_signup' %}" class="logsign">SignUP</a>
-              <a href="{% url 'account_login' %}" class="logsign">Login</a>
-              {% endif %}
             </div>
           </li>
+          <!-- Shopping Bag next to My Account -->
+          <li class="list-inline-item">
+            <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+              <div class="text-center">
+                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                <p class="my-0">
+                  {% if grand_total %}
+                  ${{ grand_total|floatformat:2 }}
+                  {% else %}
+                  $0.00
+                  {% endif %}
+                </p>
+              </div>
+            </a>
+          </li>
         </ul>
+        {% else %}
+        <ul class="list-inline list-unstyled text-center text-lg-right my-0 d-flex justify-content-end">
+          <li class="mr-2"><a href="{% url 'account_signup' %}" class="logsign text-black font-weight-bold">SignUp</a></li>
+          <p class="text-black font-weight-bold"> / </p>&nbsp;&nbsp;
+          <li><a href="{% url 'account_login' %}" class="logsign text-black font-weight-bold">Login</a></li>
+        </ul>
+        {% endif %}
+
       </div>
     </div>
     <div class="row bg-white">
@@ -92,6 +110,7 @@
         {% include 'includes/mainnav.html' %}
       </nav>
     </div>
+
     {% if products %}
     <div id="promo-banner" class="row text-center">
       <div class="col bg-black">
@@ -101,7 +120,7 @@
     {% else %}
     <div id="promo-banner" class="row text-center">
       <div class="col bg-black">
-        <h4 class="bannerTop my-1">Join Now and Get a months worth of Healthy Protein Supplies for FREE with FREE
+        <h4 class="bannerTop my-1">Join Now and Get a month's worth of Healthy Protein Supplies for FREE with FREE
           DELIVERY!!!</h4>
       </div>
     </div>
@@ -137,8 +156,6 @@
     $('.toast').toast('show');
   </script>
   {% endblock %}
-
-
 </body>
 
 </html>
