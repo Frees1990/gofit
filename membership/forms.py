@@ -7,3 +7,8 @@ class MembershipSelectForm(forms.Form):
         widget=forms.RadioSelect,
         empty_label=None
     )
+
+class MembershipForm(forms.ModelForm):
+    class Meta:
+        model = Membership
+        fields = ['name', 'description', 'price', 'duration']
