@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['gofit-d18fb7690928.herokuapp.com', 'localhost', '8000-frees1990-gofit-dbe9piu7cfe.ws-eu116.gitpod.io']
+ALLOWED_HOSTS = ['gofit-d18fb7690928.herokuapp.com', 'localhost', '8000-frees1990-gofit-dbe9piu7cfe.ws-eu117.gitpod.io']
 
 
 # Application definition
@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'membership',
+    'classes',
 
     #others
     'crispy_forms',
