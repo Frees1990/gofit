@@ -97,36 +97,17 @@ Site Goal is to provide a one stop shop for Gym Goers the site offers a wide ran
 
 ## **Design**
 ### **Colour Palette**
-
-  ![1](static/readme-images/1.png)  
-  ![2](static/readme-images/2.png)  
-  ![3](static/readme-images/3.png)   
-  ![4](static/readme-images/4.png)
-  ![5](static/readme-images/5.png)
-  ![6](static/readme-images/6.png)
-  ![7](static/readme-images/7.png)
-  ![8](static/readme-images/8.png)
-  ![9](static/readme-images/9.png)
-  ![10](static/readme-images/10.png)
-  ![11](static/readme-images/11.png)
-  ![12](static/readme-images/12.png)
-  ![13](static/readme-images/13.png)
-  ![14](static/readme-images/14.png)
+  I have kept it simple as possible not too many colors complicating the visuals
+  White, Black, Grey
+  Buttons - Green, Red and Blue
 
 ### **Typography**
-  font-family: 'Shadows Into Light', 'Arial Narrow', Arial, cursive;
-  ![f1](static/readme-images/f1.png)
-
-  font-family: "Questrial", sans-serif;
-  ![f2](static/readme-images/f2.png)
-
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-  ![f3](static/readme-images/f3.png)
+  Playfair", sans-serif;
+  Georgia, 'Times New Roman', Times, serif;
 
 ### **Images**
 #### Home Page / Carousel / 
-- Shuttershock (Paid Subscription)
-- Personal Images
+- Shuttershock 
 
 #### Registration Page:/Login Page:/Travel Req Page:
 - Shuttershock (Paid Subscription)
@@ -135,61 +116,30 @@ Site Goal is to provide a one stop shop for Gym Goers the site offers a wide ran
 - Adobe Logo (Paid Subscription)
 
 ## **Features**
-### NAVIGATION BAR ON ALL PAGES WITH ACTIVE HIGHLIGHT
-  ![Nav Bar](static/readme-images/desktopnav.png)
-
-  ![Nav Bar](static/readme-images/mobilenav.png)
+### NAVIGATION BAR ON ALL PAGES WITH ACTIVE HIGHLIGH
 
    -  My very first project with Code Institute was a Blog Site and I mentioned there that I think the most important thing about a website is the navigation bar, to me it should not be complicated to use it and it should be visible with easy to the eyes color. My navbar turns into a toggle button when the screen size go smaller. The Navigation bar also highlights what page the user is currently in. Up until today, this is still something I think should be necessary nothing beats simplicity  
 
-### CAPTURING USERS ATTENTION WITH CAROUSEL 
-
-  ![carousel](static/readme-images/carousel.mp4)
-
-   -  As a user one thing that attracts me to use a website is a short homepage with a short description of what it is all about. To me when the home page is too long and too wordy, it is already a turn off form me. This may differ to different people so this is only base on my personal preference. The photo I think adds a personal touch. 
-
 ### SOCIAL LINKS
-
-  ![Social Links](static/readme-images/footerandsocialmedia.png)
 
   - In this day and age, Social Media is everywhere and 99% of the population probably has one, so having social links on all pages of your website not only makes your website look aesthestically pleasing but as well as it could help users find your easier. Especially when you are offering services. 
 
-
-### review
-  ![Reviews](static/readme-images/review.png)
-
-  - Putting a few reviews instantly visible gives a massive inpact to the users without having to be looking around.
-
+  The Links are not working because I do not want to connect any of my social account
 
 ### ADMIN FUNCTIONALITY
-  ![admin ](static/readme-images/AdminFunctionality.png)
 
-  - Having a Link that you can download pdf files are very important when it comes to websites that provide information. 
+  - Apart from going to the Admin in Django, Admins can edit, delete and add anything they need in the website. 
 
   ### CONTACT PAGE 
-  ![Contact Page](static/readme-images/contact.png)
 
   - Contact Pages I think is one of the most usefukl pages in a website, it provides user comfort that they can reach out to someone if they do have additional information. 
 
-  ### REGISTER PAGE 
-  ![Register Page](static/readme-images/register.png)
+  ### SIGN PAGE 
 
   - This site is for a member only Travel Assistance Site . 
 
 ### **Language Used**
-  - English
-
-### **Navigation Bar**
-- I have used Materialized for my Navigation bar which basic functionality for easy use. Using Bootstrap helps with the mobile first functionality of my website. Apart from this I have also added a highlight on the current page that the user is on. 
-
-### **Landing Page**
-- My landing page speaks for itself, the cover photo shows what the site is for and about. It also has my personal introduction which explains about the site. 
-
-### **Footer**
-- Social Media links which uses fontawesome icons to make it look appealing.
-
-### **Future Features**
-- I was hoping to add a little bit more pages to offer other services but I havent got a lot of time to finish this project.
+  - English 
 
 ## **Testing**
 ### Bugs and Issues
@@ -233,52 +183,61 @@ I wasn't too sure waht I need to put in there but research about it but couldnt 
 
 ### **HTML Validatior Test**
 
-    It showed quite a few errors that I have already fixed but I wasn't able to get a screenshot of. 
-  - Landing Page - 
-https://validator.w3.org/nu/?doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2F
+  - GoFit Page - 
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2F
 
-  - contact Page -
-https://validator.w3.org/nu/?doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fcontact
+  - Membership Offers Page -
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fmembership%2Fmemberships%2F
 
-  - Registration Page - 
+  - Book Classes Page - 
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Faccounts%2Flogin%2F%3Fnext%3D%2Ffitness_classes%2F
 
-https://validator.w3.org/nu/?doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fregister
+  - Facility Gallery Page - 
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fgallery%2Fgallery%2F
 
-  - Login Page - 
-https://validator.w3.org/nu/?doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Flogin
+  - GoFit Shop Page - 
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fproducts%2F
 
-  - User Profile Page - 
-https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fprofile%2Fjoostrees
+  - SignUp Page - 
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Faccounts%2Fsignup%2F
 
-  - User Info Page - 
-https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fmyinfo
+ - LogIn -
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Faccounts%2Flogin%2F
 
-USER TRAVEL REQ
-https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2FnewTravel
+ - Product Detail - 
+https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fproducts%2F15%2F
 
-CHANGEPASS
-https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fchangepass
+  - Bag Page - 
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fbag%2F
 
-ADMIN page 
-https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fprofile%2Fsystemadmin
-George2014 systemadmin
+  - Membership Detail - 
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fmembership%2Fmembership%2Fmembership%2F2%2F
 
-USER manager
-https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fmanageusers%2Fsystemadmin
+  - Payment Page for Membership -
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fmembership%2Fpayment%2F
 
-TRAVEL MANAGER
-https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fmanagereq
+  - Payment Success Page Membersip - 
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fmembership%2Fpayment%2F
 
-TRAVEL FORM
-https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Ftravel_info
+  - Product Management -
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fproducts%2Fadd%2F
 
-UPDATE INFO
-https://validator.w3.org/nu/?showsource=yes&doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fupdate%2F66d823d2071ea5dfbca0d23e
-  
+  - Edit Class - 
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Ffitness_classes%2Fedit%2F2%2F
+
+  - Add Class - 
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Ffitness_classes%2Fadd%2F
+
+  - Edit Membership Offer - 
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fmembership%2Fadd%2F
+
+  - Add Mmbership Offer - 
+  https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fmembership%2Fadd%2F 
+
 
 ### **CSS Validator Test**
   - style.css - 
-https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fstatic%2Fcss%2Fstyle.css&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en
+
 
 ### **JS Validator Test**
   - script
@@ -286,12 +245,11 @@ https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fexperience-croat
 
   There are still errors in here however these are needed in my code to work
 
-### **Flask testing**
-
-I have been trying to find somewhere I could test my app. I did come across with Pytest but it seems so complicated. I did not dare push through with it but would def find time to go into details. 
 
 ## **Libraries and Programs used**
-- Materialize 1.0.0
+-  Bootstrap
+- Crispu forms
+- django
 - Github: Store Repositor
 - Gitpod: To create the html and css file
 - Google Fonts: Font family "Playfair", sans-serif;
@@ -302,6 +260,7 @@ I have been trying to find somewhere I could test my app. I did come across with
 - stackoverflow
 - w3 checkers
 - js hint
+- Stripe payments
 
 
 ## **Deployment & Usage**
@@ -343,11 +302,8 @@ These are the steps:
   7.  Press Enter. Your local clone will be created.
 
 ## **Credits**
- - versions of the app that needed to be changed in the requirements.txt
-    - ![STACKOVERFLOW](static/readme-images/unnamed.png)  
- - Problems with deployment when images were not loading up
-    - initial information was from Stackoverflow but nothing was copied from them. 
-    - Guidance was given by my mentor Danielle Hamilton.
+ - Stackoverflow 
+ - Code Institute Botique ado was the basis of my work especially the shopping part, I started with that to practice and get into the flow of making aps in django. 
 - compressing Images
   - https://squoosh.app/
 
@@ -358,17 +314,8 @@ The Idea is to make the contact page look interactive and to show the benefits o
 - Embed video instructions from
   - Code Institue 
   - W3schools
-
-- Some content from
-  - https://www.legislation.gov.uk/ukpga/1985/68/contents
-
-- Image converting from jpg to webp
-  https://image.online-convert.com/convert-to-webp
-
-- Lighthouse Information Guidelines Info 
-Lightouse
-
-borrowd some code from my co-student Mika Virtubo 
+  - Youtube
+  - Geeks for geeks 
 
 ### **Media**
 
