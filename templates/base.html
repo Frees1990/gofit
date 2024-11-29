@@ -59,11 +59,10 @@
         {% if request.user.is_authenticated %}
         <ul class="list-inline list-unstyled text-center text-lg-right my-0">
           <li class="list-inline-item dropdown">
-            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true"
-              aria-expanded="false">
+            <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <div class="text-center">
-                <div><i class="fas fa-user fa-lg"></i></div>
-                <p class="my-0">My Account</p>
+                  <div><i class="fas fa-user fa-lg"></i></div>
+                  <p class="my-0">My Account</p>
               </div>
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -93,7 +92,6 @@
         {% else %}
         <ul class="list-inline list-unstyled text-center text-lg-right my-0 d-flex justify-content-end">
           <li class="mr-2"><a href="{% url 'account_signup' %}" class="logsign text-black font-weight-bold">SignUp</a></li>
-          <p class="text-black font-weight-bold"> / </p>&nbsp;&nbsp;
           <li><a href="{% url 'account_login' %}" class="logsign text-black font-weight-bold">Login</a></li>
         </ul>
         {% endif %}
@@ -152,43 +150,45 @@
   {% endblock %}
 
   {% block postloadjs %}
-  <script type="text/javascript">
+  <script>
     $('.toast').toast('show');
   </script>
   {% endblock %}
-</body>
-<footer class="bg-dark text-white py-4 mt-5">
-  <div class="container">
-    <div class="row">
-      <!-- Social Media Links -->
-      <div class="col-md-6">
-        <h5>Follow Us</h5>
-        <ul class="list-inline">
-          <li class="list-inline-item"><a href="https://www.facebook.com" target="_blank" class="text-white"><i class="fab fa-facebook fa-lg"></i> Facebook</a></li>
-          <li class="list-inline-item"><a href="https://twitter.com" target="_blank" class="text-white"><i class="fab fa-twitter fa-lg"></i> Twitter</a></li>
-          <li class="list-inline-item"><a href="https://www.instagram.com" target="_blank" class="text-white"><i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
-          <li class="list-inline-item"><a href="https://www.linkedin.com" target="_blank" class="text-white"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a></li>
-        </ul>
-      </div>
 
-      <!-- Contact Information -->
-      <div class="col-md-6">
-        <h5>Contact Us</h5>
-        <ul class="list-unstyled">
-          <li><i class="fas fa-map-marker-alt"></i> 123 Fitness St, London, UK</li>
-          <li><i class="fas fa-phone"></i> +44 20 7946 0958</li>
-          <li><i class="fas fa-envelope"></i> info@gofit.co.uk</li>
-        </ul>
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <!-- Social Media Links -->
+        <div class="col-md-6">
+          <h5>Follow Us</h5>
+          <ul class="list-inline">
+            <li class="list-inline-item"><a href="https://www.facebook.com" target="_blank" class="text-white"><i class="fab fa-facebook fa-lg"></i> Facebook</a></li>
+            <li class="list-inline-item"><a href="https://twitter.com" target="_blank" class="text-white"><i class="fab fa-twitter fa-lg"></i> Twitter</a></li>
+            <li class="list-inline-item"><a href="https://www.instagram.com" target="_blank" class="text-white"><i class="fab fa-instagram fa-lg"></i> Instagram</a></li>
+            <li class="list-inline-item"><a href="https://www.linkedin.com" target="_blank" class="text-white"><i class="fab fa-linkedin fa-lg"></i> LinkedIn</a></li>
+          </ul>
+        </div>
+  
+        <!-- Contact Information -->
+        <div class="col-md-6">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-map-marker-alt"></i> 123 Fitness St, London, UK</li>
+            <li><i class="fas fa-phone"></i> +44 20 7946 0958</li>
+            <li><i class="fas fa-envelope"></i> info@gofit.co.uk</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col text-center mt-4">
+          <p>&copy; 2024 GoFIT. All rights reserved.</p>
+        </div>
       </div>
     </div>
-    
-    <div class="row">
-      <div class="col text-center mt-4">
-        <p>&copy; 2024 GoFIT. All rights reserved.</p>
-      </div>
-    </div>
-  </div>
-</footer>
+  </footer>
+</body>
+
 
 
 
