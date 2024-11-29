@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+    <div class="container header-container">
+        <div class="row">
+            <div class="col"></div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <h1 class="text-center fw-bold text-white">Fitness Class Schedule</h1>
+
+        <!-- Only show the add class button to admin users -->
+        {% if user.is_authenticated and user.is_staff %}
+            <div class="text-end mb-3">
+                <a href="{% url 'add_class' %}" class="btn btn-primary btn-sm">Add New Class</a>
+            </div>
+        {% endif %}
+
+        <div class="row">
+            {% for day, classes in class_by_day %}
+                <div class="col-md-2 mb-3">
+                    <div class="card" style="background-color: rgba(255, 255, 255, 0.8);">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">{{ day|title }}</h5>
+                            {% for class in classes %}
+                                <div class="mb-2">
+                                    <strong>{{ class.name }}</strong><br>
+                                    {{ class.start_time|time:"g:i A" }} - {{ class.end_time|time:"g:i A" }}
+                                    
+                                    <!-- Admin actions -->
+                                    {% if user.is_authenticated and user.is_staff %}
+                                        <div class="mt-1">
+                                            <a href="{% url 'edit_class' class.id %}" class="btn btn-secondary btn-sm">Edit</a>
+                                            <a href="{% url 'delete_class' class.id %}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?');">Delete</a>
+                                        </div>
+                                    {% endif %}
+                                    
+                                    <!-- Book class button for members -->
+                                    {% if user.is_authenticated and not user.is_staff %}
+                                    <form method="post" action="{% url 'book_class' class.id %}">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-primary">Book Class</button>
+                                    </form>
+                                    
+                                    {% endif %}
+                                </div>
+                            {% endfor %}
+                            {% if classes.count == 0 %}
+                                <p class="text-center">No classes scheduled.</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -194,19 +194,42 @@ Site Goal is to provide a one stop shop for Gym Goers the site offers a wide ran
 ## **Testing**
 ### Bugs and Issues
 
-  - #### IDE Issues
-    - My IDE crashed because I cleared my cookies and it caused my HEROKO to logged me out and lock me out, it took me a while to figure it out but then It was showing in GITHUB that the HEROKU was failing. Relaize that I was also logged out from the CI student account. 
   - #### Code Issues
     
-    - While creating my flask app, I could not seem to load up the site at first, reason because the version was not correct. I did a little bit of research and tried it out myself but could not fix it. With the help of student support they pointed me to the right direction.
+- Allauth installation was not installing even with the 0.41.0 , student care was able to assist me with the providing the most updated allauth which was the 54.0
 
-    - On the earliest stage of building the site, I didn't have much issues with coding but then. When I was trying to code a Delete route that passes to a Materialize Modal, I could not seem to pass it through the modal only to find out that instead of using the user I added username. This is for the delte functionality in the Admin page.
+- Image was not loading because staticfiles path was not a tuple
 
-    - The same issue occured when I was trying to figure out to Delete the current Travel request passing through Materialize Modal. It keeps saying that I have too many reroutes to the newTravel page, removing the the redirection code in the newTravle,html but it causes my admin page to fail. I tried to find a way to fix it without creating another page but the only feesable solution was to create another page that renders the travel info data the same as the newTravel. 
+- Forgot to double the underscore in the views.py to show the categories, only had one underscore causing it to show an error. Had to recheck the walkthrough to compare my work and realized I missed the 2nd underscore. 
 
-    - Making my website responsive to screen size:
+- The Sort drop down did not work, realized that I was in the wrong version of bootsrap. Changed my version from 5.0 to 4.6 and used the code from this version and the dropped down worked. 
 
-          Apart from bootstrap I also have used media queries which I followed from "LOVE RUNNING mini project"
+- When trying to deploy my work to heroku I get an fail to deploy. I googled everywhere but it keeps saying that I did not set up the s3 and iam correctly so I followed the video again and it still getting the same error. I immidietly contacted student support who gave me the updated steps to do the s3 and Iam, this has resolved trhe issue I have been having. 
+
+- The images in my GoFit products are not showing thinking it might have been the url but it isnt. It showing a appended data. What I did is I went to the admin django and removed the image that is currently there and replaced it with the one that is not appended it resolve the issues.
+
+- The imahes in my Facility Gallery are also not showing found out that it is hard coded reason why it showing in local but not the deployed one. tutor support rebecca told me to add this format  {{ MEDIA_URL }}image_name.png but still was not working so 
+
+- remove option was not working, having to look at what was missing on my code. The only thing that solved the problem  was correcting a typo on the script source.
+
+- update and remove button are not working in the deployed site but are working on the local host , I did not do any changes with this resolved by refreshing multiple times and closing the gitpos dev env.
+
+- The scroll up and down in toast is not working - This resolved itself overtime, I somehow made it work but could not figure out what I change to make it work. 
+
+- PROBLEM TO SOLVE"  Stripe Payment field is not showing, this was a miss on my end, it was showing but I could not see it because it was behind the background image. I found out about it when I did a dev tools inspecting it. 
+
+- After installing pip3 install django-countries==7.2.1 and editing the models, tried migrating and it keeps getting this error 
+   ![Error](readme/readme-media/errors.png)
+   ![Edit](readme/readme-media/editmigration1.png)
+  ![Edit2](readme/readme-media/editmigration2.png)
+    
+ googled this issue and after hours of searching I found this 
+
+  https://stackoverflow.com/questions/8484689/django-form-database-error-value-too-long-for-type-character-varying4
+
+- I could not find what he was saying column max lenght but did find this
+I wasn't too sure waht I need to put in there but research about it but couldnt find anything so I bit my tongue and just changed it to 1000 and did the migrate and it WORKED I checked botique ado migrations and its still oon 2 so I was wondering what could have caused it. I changed it back to 2 for now and will have a look into it when I have more time in my hands. 
+#PROBLEM TO SOLVE = SIGN UP DOS NOT DIRECT YOU TO THE VERIFY EMAIL PAGE BUT DIRECTS YOU TO THJE MAIN PAGE. EVERYTHIONG LOOKS OKAY BUT FIGURE IT OUT LATER 
 
 ### **HTML Validatior Test**
 
@@ -218,6 +241,7 @@ https://validator.w3.org/nu/?doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.h
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fcontact
 
   - Registration Page - 
+
 https://validator.w3.org/nu/?doc=https%3A%2F%2Fexperience-croatia-032eba8fb52c.herokuapp.com%2Fregister
 
   - Login Page - 

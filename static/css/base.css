@@ -250,6 +250,9 @@ a.category-badge > span.badge:hover {
 h1 {
     font-weight: bold !important;
 }
+footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+}
 
 /* -------------------------------- Media Queries */
 

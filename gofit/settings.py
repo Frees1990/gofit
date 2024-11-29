@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'profiles',
     'membership',
     'membership_payment',
+    'fitness_class',
 
     #others
     'crispy_bootstrap5',

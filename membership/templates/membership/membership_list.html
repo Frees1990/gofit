@@ -12,45 +12,43 @@
 {% endblock %}
 
 {% block content %}
-    
-    <div class="row">
-        <div class="product-container col-12 col-md-10 offset-md-1">
-            <div class="row mt-1 mb-2"></div>
-            
-            <!-- Loop through each membership -->
-            <div class="row">
-                {% for membership in memberships %}
-                    <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card h-100 border-0">
-                            <div class="card-body pb-0">
-                                <h5 class="card-title">{{ membership.name }}</h5>
-                                <small class="card-text">{{ membership.description }}</small>
+    <div class="container">
+        <div class="row mt-3">
+            <div class="product-container col-12">
+                <!-- Loop through each membership -->
+                <div class="row">
+                    {% for membership in memberships %}
+                        <div class="col-sm-6 col-md-4 col-lg-3">
+                            <div class="card h-100 border-0">
+                                <div class="card-body pb-0">
+                                    <h5 class="card-title">{{ membership.name }}</h5>
+                                    <small class="card-text">{{ membership.description }}</small>
+                                </div>
+                                <div class="card-footer bg-white pt-0 border-0 text-left">
+                                    <p class="lead mb-0 font-weight-bold">£{{ membership.price }} </p>
+                                    <small class="text-muted">{{ membership.duration }} Month Subscription</small>
+                                </div>
+
+                                <!-- Show 'Add Membership' link if user is admin -->
+                                {% if request.user.is_superuser %}
+                                    <small class="ml-3">
+                                        <a href="{% url 'add_membership' %}">Edit</a> | 
+                                        <a class="text-danger" href="{% url 'add_membership' %}">Delete</a> |
+                                        <a href="{% url 'add_membership' %}">Add</a> | 
+                                    </small>
+                                {% else %}
+                                    <form method="post">
+                                        {% csrf_token %}
+                                        <div class="text-center mb-3">
+                                            <a href="{% url 'membership_detail' membership_id=membership.id %}" class="btn btn-dark btn-sm">View Membership</a>
+                                        </div>
+                                    </form>
+                                {% endif %}
                             </div>
-                            <div class="card-footer bg-white pt-0 border-0 text-left">
-                                <p class="lead mb-0 font-weight-bold">£{{ membership.price }} </p>
-                                <small class="text-muted">{{ membership.duration }} Month Subscription</small>
-                            </div>
-                            
-                            <!-- Show 'Add Membership' link if user is admin -->
-                            {% if request.user.is_superuser %}
-                                <small class="ml-3">
-                                    <a href="{% url 'add_membership' %}">Edit</a> | 
-                                    <a class="text-danger" href="{% url 'add_membership' %}">Delete</a> |
-                                    <a href="{% url 'add_membership' %}">Add</a> | 
-                                </small>
-                            {% else %}
-                                <form method="post">
-                                    {% csrf_token %}
-                                    <div class="text-center mb-3">
-                                        <a href="{% url 'membership_detail' membership_id=membership.id %}" class="btn btn-dark btn-sm">View Membership</a>
-                                    </div>
-                                </form>
-                            {% endif %}
                         </div>
-                    </div>
-                {% endfor %}
+                    {% endfor %}
+                </div>
             </div>
         </div>
     </div>
-
 {% endblock %}
