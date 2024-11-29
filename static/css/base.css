@@ -341,4 +341,7 @@ h1 {
         color: yellow;
         font-weight: 600;
     }
+    .hitmeup {
+        font-size: 1.5rem;  /* Smaller font size for smaller screens */
+    }
 }
