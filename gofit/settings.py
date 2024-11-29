@@ -70,11 +70,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-    'https://8000-frees1990-gofit-dbe9piu7cfe.ws-eu117.gitpod.io',  # Add your Gitpod URL here
-    # Add any other trusted origins as needed
-]
-
 ROOT_URLCONF = 'gofit.urls'
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
