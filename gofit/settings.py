@@ -52,9 +52,11 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'membership',
+    'membership_payment',
 
     #others
     'crispy_forms',
+    'crispy_bootstrap4', 
     'storages',
 ]
 
@@ -66,6 +68,11 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+]
+
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-frees1990-gofit-dbe9piu7cfe.ws-eu117.gitpod.io',  # Add your Gitpod URL here
+    # Add any other trusted origins as needed
 ]
 
 ROOT_URLCONF = 'gofit.urls'
