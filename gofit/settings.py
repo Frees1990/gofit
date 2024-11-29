@@ -55,8 +55,8 @@ INSTALLED_APPS = [
     'membership_payment',
 
     #others
+    'crispy_bootstrap5',
     'crispy_forms',
-    'crispy_bootstrap4', 
     'storages',
 ]
 
@@ -70,9 +70,15 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://8000-frees1990-gofit-dbe9piu7cfe.ws-eu117.gitpod.io',
+    # Add other trusted domains if necessary
+]
+
 ROOT_URLCONF = 'gofit.urls'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
 
 TEMPLATES = [
     {

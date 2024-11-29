@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 
+
 {% block extra_css %}
     <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
 {% endblock %}
@@ -14,6 +15,7 @@
 {% endblock %}
 
 {% block content %}
+{% load crispy_forms_tags %}
     <div class="overlay"></div>
     <div class="container">
         <div class="row">
