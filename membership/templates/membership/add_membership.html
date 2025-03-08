@@ -5,19 +5,69 @@
     <div class="overlay"></div>
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col text-center text-white">
+                <h1>Add a New Membership Plan</h1>
+            </div>
         </div>
     </div>
 {% endblock %}
 
 {% block content %}
-  <h2>Add a New Membership Plan</h2>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7">  <!-- Wider card for better layout -->
+                <div class="card shadow-lg border-0 rounded-lg p-4">
+                    <div class="card-body">
+                        <h3 class="text-center text-primary font-weight-bold">Add Membership</h3>
+                        <form method="post">
+                            {% csrf_token %}
 
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Add Membership</button>
-  </form>
+                            <div class="row">
+                                <!-- Name Field -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.name.label }}</label>
+                                        <input type="text" name="name" class="form-control" placeholder="Enter Membership Name">
+                                    </div>
+                                </div>
 
-  <a href="{% url 'membership_list' %}">Back to Membership List</a>
+                                <!-- Description Field (Adjusted Height & Alignment) -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.description.label }}</label>
+                                        <textarea name="description" class="form-control" rows="2" placeholder="Enter Description"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Price Field -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.price.label }}</label>
+                                        <input type="number" name="price" class="form-control" placeholder="Enter Price">
+                                    </div>
+                                </div>
+
+                                <!-- Duration Field -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.duration.label }}</label>
+                                        <input type="number" name="duration" class="form-control" placeholder="Enter Duration in Months">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-3">
+                                <button type="submit" class="btn btn-success btn-lg">Add Membership</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="{% url 'membership_list' %}" class="btn btn-outline-secondary btn-lg">Back to Membership List</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
