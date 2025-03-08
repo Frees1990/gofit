@@ -5,18 +5,79 @@
     <div class="overlay"></div>
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col text-center text-white">
+                <h1>Edit Membership Plan</h1>
+            </div>
         </div>
     </div>
 {% endblock %}
+
 {% block content %}
-  <h2>Edit Membership Plan</h2>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7">  <!-- Matches Add Membership layout -->
+                <div class="card shadow-lg border-0 rounded-lg p-4">
+                    <div class="card-body">
+                        <h3 class="text-center text-primary font-weight-bold">Edit Membership</h3>
+                        <form method="post">
+                            {% csrf_token %}
 
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Edit Membership</button>
-  </form>
+                            <div class="row">
+                                <!-- Name Field -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.name.label }}</label>
+                                        {{ form.name }}
+                                    </div>
+                                </div>
 
-  <a href="{% url 'membership_list' %}">Back to Membership List</a>
+                                <!-- Description Field -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.description.label }}</label>
+                                        {{ form.description }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Price Field -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.price.label }}</label>
+                                        {{ form.price }}
+                                    </div>
+                                </div>
+
+                                <!-- Duration Field -->
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.duration.label }}</label>
+                                        {{ form.duration }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <!-- Info Field -->
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label class="font-weight-bold">{{ form.info.label }}</label>
+                                        {{ form.info }}
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="text-center mt-3">
+                                <button type="submit" class="btn btn-primary btn-lg">Save Changes</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="text-center mt-3">
+                    <a href="{% url 'membership_list' %}" class="btn btn-outline-secondary btn-lg">Back to Membership List</a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}
