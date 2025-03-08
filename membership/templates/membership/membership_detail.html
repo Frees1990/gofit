@@ -1,71 +1,55 @@
 {% extends "base.html" %}
 {% load static %}
-{% load crispy_forms_tags %}
 
 {% block page_header %}
-<div class="container header-container">
-    <div class="row">
-        <div class="col text-center text-white">
-            <h1 class="display-4 font-weight-bold">Membership Details</h1>
+    <div class="overlay"></div>
+    <div class="container header-container">
+        <div class="row">
+            <div class="col text-center text-white">
+                <h1>{{ membership.name }}</h1>
+            </div>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block content %}
-<div class="container py-5">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <!-- Card with transparent background -->
-            <div class="card shadow-lg border-light rounded" style="background: rgba(159, 191, 211, 0.75);">
-                <div class="card-body">
-                    <!-- Membership Details -->
-                    <div class="text-center ">
-                        <h2 class="card-title text-white"><strong>{{ membership.name }}</strong></h2>
-                        <h3 class="card-text text-black">{{ membership.description }}</h3>
-                        <p>The GoFit Bronze Club is perfect for individuals starting their fitness journey. This entry-level membership grants access to essential gym facilities, providing a supportive environment to help you stay active and healthy.</p>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-lg border-0 rounded-lg p-4">
+                    <div class="card-body text-center">
+                        <h3 class="text-primary font-weight-bold">{{ membership.name }}</h3>
+                        <p class="lead font-weight-bold text-dark">£{{ membership.price }}</p>
+                        <p class="text-muted">{{ membership.duration }} Month Subscription</p>
+                        <hr>
 
-                        <p>Features:</p>
-                            
-                        <p>Basic Gym Access: Enjoy full access to our cardio and strength training equipment,     
-                            including treadmills, stationary bikes, free weights, and resistance machines.
-                            Locker Room Facilities: Complimentary use of lockers, showers, and changing rooms.
-                            Flexible Hours: Access during off-peak hours to accommodate your schedule.
-                            Member Support: Friendly staff available to assist with equipment usage and fitness tips.
-                        </p>
-                        <p>
-                            Who is it for?
-                            Ideal for beginners or casual fitness enthusiasts looking for a straightforward, affordable gym experience without additional features.
-                        </p>
-                        <p>
-                            Sign-Up Bonus:
-                            Sign up today and get a free introductory fitness guide tailored to your fitness goals!
-                        </p>
-                        <h3 class="text-danger"><strong>£{{ membership.price }}</strong></h3>
-                        <p class="text-white"><strong>{{ membership.duration }} Month Subscription</strong></p>
-                    </div>
+                        <h5 class="text-dark">Membership Benefits:</h5>
+                        
+                        <!-- Displaying Description as a paragraph -->
+                        <p class="text-dark">{{ membership.description }}</p>
 
-                    <!-- Proceed to Payment Button -->
-                    <div class="text-center mt-4">
-                        {% if user.is_authenticated %}
-                            <!-- Redirect to payment form -->
-                            <form action="{% url 'payment_view' %}" method="post">
-                                {% csrf_token %}
-                                <input type="hidden" name="membership_id" value="{{ membership.id }}">
-                                <button type="submit" class="btn btn-sm btn-success px-5 py-3 shadow-sm">
-                                    <strong>Proceed to Payment</strong>
-                                </button>
-                            </form>
-                        {% else %}
-                            <!-- If user is not authenticated, redirect to sign-up page -->
-                            <a href="{% url 'account_signup' %}" class="btn btn-lg btn-primary px-5 py-3 shadow-sm">
-                                Sign Up for Membership
-                            </a>
+                        <!-- Only show bullets for actual list items -->
+                        {% if membership.info %}
+                            <ul class="text-left">
+                                {% for line in membership.info.splitlines %}
+                                    {% if line.strip %}  {# Ignore empty lines #}
+                                        <li>{{ line }}</li>
+                                    {% endif %}
+                                {% endfor %}
+                            </ul>
                         {% endif %}
                     </div>
+                    <div class="card-footer bg-white border-0 text-center">
+                        {% if request.user.is_superuser %}
+                            <a href="{% url 'edit_membership' membership.id %}" class="btn btn-primary btn-sm">Edit</a>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <div class="text-center mt-3">
+                    <a href="{% url 'membership_list' %}" class="btn btn-outline-secondary btn-lg">Back to Membership List</a>
                 </div>
             </div>
         </div>
     </div>
-</div>
 {% endblock %}
