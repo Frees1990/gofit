@@ -7,6 +7,7 @@ from django.shortcuts import redirect
 from .models import Membership
 from .forms import MembershipForm
 
+
 # View to display the membership list
 def membership_list(request):
     memberships = Membership.objects.all()

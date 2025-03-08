@@ -11,7 +11,7 @@ def class_schedule(request):
     classes = FitnessClass.objects.all()
 
     # Prepare a list of tuples (day, classes) where each day has its respective classes
-    days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun']
+    days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat']
     class_by_day = [(day, classes.filter(day=day)) for day in days]
 
     # If the request method is POST, try to save the booking

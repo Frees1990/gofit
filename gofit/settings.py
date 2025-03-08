@@ -27,9 +27,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['gofit-d18fb7690928.herokuapp.com', 'localhost', '8000-frees1990-gofit-dbe9piu7cfe.ws-eu117.gitpod.io']
+ALLOWED_HOSTS = ['8000-frees1990-gofit-h2m4dfztcpc.ws-eu118.gitpod.io', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -52,7 +52,6 @@ INSTALLED_APPS = [
     'checkout',
     'profiles',
     'membership',
-    'membership_payment',
     'fitness_class',
 
     #others

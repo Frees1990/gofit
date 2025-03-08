@@ -1,0 +1,350 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/gym.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 70vh;
+    color: black;
+    font-family: "Playfair", sans-serif;
+    font-weight: 400;
+}
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+.logo-font {
+    letter-spacing: 5px;
+    font-weight: 900;
+}
+.bannerTop {
+    font-size: medium;
+    font-style: normal;
+    color: yellow;
+    word-spacing: 5px;
+    letter-spacing: 5px;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+.btn-black {
+    background: black;
+    color: white;
+}
+.btn-outline-black {
+    background: white;
+    color: black !important; /* use important to override link colors for <a> elements */
+    border: 1px solid black;
+}
+.sign-up-button,
+.sign-up-button:hover,
+.sign-up-button:active,
+.sign-up-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: black;
+    color: white !important;
+}
+.logsign {
+    margin-right: 50%;
+}
+/* ------------------------------- bootstrap toasts */
+.message-container {
+    position: fixed;
+    top: 100px;
+    right: 15px;
+    z-index: 99999999999;
+}
+.custom-toast {
+    overflow: visible;
+}
+.toast-capper {
+    height: 2px;
+}
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    border-bottom: 10px solid black;
+    position: absolute;
+    top: -10px;
+    right: 36px;
+}
+
+/* Convenience classes - colors copied from Bootstrap */
+.arrow-primary {
+    border-bottom-color: #007bff !important;
+}
+.arrow-secondary {
+    border-bottom-color: #6c757d !important;
+}
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+.arrow-danger {
+    border-bottom-color: #dc3545 !important;
+}
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
+}
+.arrow-info {
+    border-bottom-color: #17a2b8 !important;
+}
+.arrow-light {
+    border-bottom-color: #f8f9fa !important;
+}
+.arrow-dark {
+    border-bottom-color: #343a40 !important;
+}
+.bag-notification-wrapper {
+    height: 100px;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.text-black {
+    color: #000 !important;
+}
+
+.border-black {
+    border: 1px solid black !important;
+}
+.bg-black {
+    background-color: #000 !important;
+}
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+.backcolor{
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: green;
+    z-index: -1;
+}
+
+/*--------------------------------- Products */
+a.category-badge > span.badge:hover {
+    background: #212529 !important;
+    color: #fff !important;
+}
+.btt-button {
+    height: 42px;
+    width: 42px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+}
+.btt-link,
+.update-link,
+.remove-item {
+    cursor: pointer;
+}
+.card-img-top {
+    height: 250px;
+    width: 300px;
+}
+.product_name{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+    font-weight: 600;
+}
+/* Allauth form formatting */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem; /* mt-4 */
+    color: #6c757d; /* text-secondary */
+}
+
+.allauth-form-inner-content input {
+    border-color: #000;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+	/* btn */
+	display: inline-block;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #000;
+    border: 1px solid #000;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+
+    /* standard bootstrap btn transitions */
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {	
+	color: #fff;
+    background-color: #222;
+    border-color: #222;
+}
+
+.allauth-form-inner-content a {
+	color: #17a2b8; /* text-info */
+}
+/* Product Form */
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+.custom-checkbox .custom-control-label::before {
+    border-radius: 0;
+    border-color: #dc3545;
+}
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    background-color: #dc3545;
+    border-color: #dc3545;
+    border-radius: 0;
+}
+
+/* Custom styles */
+.card {
+    background: rgba(255, 255, 255, 0.8) !important;
+}
+
+h1 {
+    font-weight: bold !important;
+}
+footer {
+    margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+    max-width: 80%;
+    }
+    .header-container {
+    padding-top: 160px;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) and (max-width:1200px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+    .header-container {
+        padding-top: 200px;
+    }
+    .card-img-top {
+        height: 250px;
+        width: 300px;
+    }
+    .product_name{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+        font-weight: 600;
+    }
+}
+@media (min-width: 600px) and (max-width: 992px) {
+    .header-container {
+        padding-top: 170px;
+    }
+    body{
+        height: calc(100vh - 160vh);
+    }
+    .card-img-top {
+        height: 250px;
+        width: 300px;
+    }
+    .product_name{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: large;
+        font-weight: 600;
+    }
+    .logo-font {
+        font-size: x-large;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+}
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (min-width: 200px) and (max-width: 600px){
+    .header-container {
+        padding-top: 170px;
+    }
+    body{
+        height: calc(100vh - 160vh);
+    }
+    .logo-font {
+        font-size: large;
+        font-weight: 800;
+        margin-bottom: 20px;
+    }
+    .card-img-top {
+        height: 150px;
+        width: 200px;
+        margin-left: 15%;
+    }
+    .product_name{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: smaller;
+        text-align: center;
+    }
+    .lead{
+        font-size: smaller;
+        font-weight: 600;
+        text-align: center;
+    }
+    .bannerTop {
+        font-size: x-small;
+        font-style: normal;
+        color: yellow;
+        font-weight: 600;
+    }
+    .hitmeup {
+        font-size: 1.5rem;  /* Smaller font size for smaller screens */
+    }
+}

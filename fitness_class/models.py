@@ -9,7 +9,6 @@ class FitnessClass(models.Model):
         ('Thursday', 'Thursday'),
         ('Friday', 'Friday'),
         ('Saturday', 'Saturday'),
-        ('Sunday', 'Sunday'),
     ]
     
     name = models.CharField(max_length=200)
