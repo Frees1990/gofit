@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-frees1990-gofit-h2m4dfztcpc.ws-eu118.gitpod.io', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['8000-frees1990-gofit-h2m4dfztcpc.ws-eu118.gitpod.io', 'localhost', '127.0.0.1', 'gofit-d18fb7690928.herokuapp.com']
 
 
 # Application definition
