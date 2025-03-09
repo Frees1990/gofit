@@ -123,7 +123,9 @@
     {% else %}
     <div id="promo-banner" class="row text-center">
       <div class="col bg-black">
-        <h4 class="bannerTop my-1">Click HERE And Check Out Our Exclusive Membership Offers!!!</h4>
+        <h4 class="bannerTop my-1">Click <a href="{% url 'membership_list' %}" id="membership-link"  aria-haspopup="true" aria-expanded="false">
+          <strong>HERE</strong>
+      </a> And Check Out Our Exclusive Membership Offers!!!</h4>
       </div>
     </div>
     {% endif %}
