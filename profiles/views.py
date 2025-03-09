@@ -3,7 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 
 from .models import UserProfile
-from .forms import UserProfileForm, UserProfile
+from .forms import UserProfileForm
 
 
 from checkout.models import Order
@@ -48,13 +48,3 @@ def order_history(request, order_number):
     }
 
     return render(request, template, context)
-
-def profile_view(request):
-    # Assuming UserProfile is linked to the User model
-    user_profile = UserProfile.objects.get(user=request.user)
-    bookings = user_profile.bookings.all()  # Assuming related name is 'bookings'
-
-    return render(request, 'profiles/profile.html', {
-        'user_profile': user_profile,
-        'bookings': bookings
-    })
