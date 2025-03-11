@@ -77,13 +77,12 @@ def add_product(request):
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
 
-    """ Add a product to the store """
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            product = form.save()  # ✅ Store the saved product in a variable
             messages.success(request, 'Successfully added product!')
-            return redirect(reverse('product_detail', args=[product.id]))
+            return redirect(reverse('product_detail', args=[product.id]))  # ✅ Now 'product' exists
         else:
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
