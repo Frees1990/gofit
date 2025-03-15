@@ -4,7 +4,10 @@
 {% block page_header %}
     <div class="container header-container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col text-center p-4" style="background-color: rgba(0, 0, 0, 0.3); border-radius: 8px;">
+                <h1 class="display-4 text-white">Welcome to Our Gym & Healthy Meals Hub!</h1>
+                <p class="lead text-white">Your one-stop destination for fitness memberships and nutritious meal plans.</p>
+            </div>
         </div>
     </div>
 {% endblock %}
@@ -12,10 +15,13 @@
 {% block content %}
     <div class="container h-100">
         <div class="row h-100">
-            <div class="col-7 col-md-6 my-auto">
-                <h1 class="display-4 text-white hitmeup">
-                    Start Your Fitness Journey With Us!!
-                </h1>
+            <div class="col-12 col-md-6 my-auto p-4" style="background-color: rgba(0, 0, 0, 0.3); border-radius: 8px;">
+                <h2 class="display-6 text-white">Our Gym Membership Offers</h2>
+                <p class="text-white">Join our community and access state-of-the-art facilities tailored to your fitness journey.</p>
+            </div>
+            <div class="col-12 col-md-6 my-auto p-4" style="background-color: rgba(0, 0, 0, 0.3); border-radius: 8px;">
+                <h2 class="display-6 text-white">Our Healthy Meal Plans</h2>
+                <p class="text-white">Fuel your body with our delicious and nutritious meals designed for your health goals.</p>
             </div>
         </div>
     </div>
@@ -25,7 +31,7 @@
     <style>
         /* Media query for screens smaller than 600px */
         @media (max-width: 600px) {
-            .hitmeup {
+            .hitmeup, .display-6 {
                 font-size: 1.5rem;  /* Smaller font size for smaller screens */
             }
         }
