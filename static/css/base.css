@@ -157,8 +157,7 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 .card-img-top {
-    height: 250px;
-    width: 300px;
+    max-width: 200px;
 }
 .product_name{
     font-family: Georgia, 'Times New Roman', Times, serif;
