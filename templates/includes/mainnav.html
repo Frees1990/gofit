@@ -1,6 +1,16 @@
 <div class="collapse navbar-collapse" id="main-nav">
     <ul class="navbar-nav w-auto mx-auto">
         <li class="nav-item dropdown">
+            <a class="logo-font nav-link text-secondary mr-5" href="{% url 'home' %}" id="membership-link"  aria-haspopup="true" aria-expanded="false">
+                Home
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="logo-font nav-link text-secondary mr-5" href="{% url 'about' %}" id="membership-link"  aria-haspopup="true" aria-expanded="false">
+                About
+            </a>
+        </li>
+        <li class="nav-item dropdown">
             <a class="logo-font nav-link text-secondary mr-5" href="{% url 'membership_list' %}" id="membership-link"  aria-haspopup="true" aria-expanded="false">
                 Membership Offers
             </a>
