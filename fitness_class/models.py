@@ -18,12 +18,3 @@ class FitnessClass(models.Model):
 
     def __str__(self):
         return f"{self.name} on {self.day} from {self.start_time} to {self.end_time}"
-
-
-class Booking(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
-    fitness_class = models.ForeignKey(FitnessClass, on_delete=models.CASCADE)
-    booked_at = models.DateTimeField(auto_now_add=True)
-
-    def __str__(self):
-        return f'{self.user.username} booked for {self.fitness_class.name} on {self.fitness_class.day}'
