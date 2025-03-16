@@ -22,6 +22,8 @@
                         <form method="post">
                             {% csrf_token %}
 
+                            <input type="hidden" name="next" value="{{ request.path }}">
+
                             <div class="row">
                                 <!-- Name Field -->
                                 <div class="col-md-6">
