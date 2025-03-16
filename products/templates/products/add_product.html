@@ -25,6 +25,8 @@
                         <form method="POST" action="{% url 'add_product' %}" class="form mb-4" enctype="multipart/form-data">
                             {% csrf_token %}
                             
+                            <input type="hidden" name="next" value="/products/add">
+                            
                             {% for field in form %}
                                 {% if field.name == 'image' %}
                                     <div class="form-group">
