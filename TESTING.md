@@ -10,12 +10,29 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 
 | Page             | W3C URL                                                                                                    | Screenshot                                                              | Notes                               |
 | ---------------- | ---------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | ----------------------------------- |
-| Home             | [W3C](https://validator.w3.org/nu/?doc=https://dougyb83.github.io/Lunas-Leopard-Geckos/index.html)            | ![screenshot](documentation/testing/html-validation-home.png)             | Pass: No Errors                     |
-| Available geckos | [W3C](https://validator.w3.org/nu/?doc=https://dougyb83.github.io/Lunas-Leopard-Geckos/available-geckos.html) | ![screenshot](documentation/testing/html-validation-available-geckos.png) | Section lacks heading h2-h6 warning |
-| FAQ              | [W3C](https://validator.w3.org/nu/?doc=https://dougyb83.github.io/Lunas-Leopard-Geckos/faq.html)              | ![screenshot](documentation/testing/html-validation-faq.png)              | Section lacks heading h2-h6 warning |
-| Contact          | [W3C](https://validator.w3.org/nu/?doc=https://dougyb83.github.io/Lunas-Leopard-Geckos/contact.html)          | ![screenshot](documentation/testing/html-validation-contact.png)          | Section lacks heading h2-h6 warning |
-| Confirmation     | [W3C](https://validator.w3.org/nu/?doc=https://dougyb83.github.io/Lunas-Leopard-Geckos/confirmation.html)     | ![screenshot](documentation/testing/html-validation-confirmation.png)     | Pass: No Errors                     |
-| 404              | [W3C](https://validator.w3.org/nu/?doc=https://dougyb83.github.io/Lunas-Leopard-Geckos/404.html)              | ![screenshot](documentation/testing/html-validation-404.png)              | Pass: No Errors                     |
+| Home             | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2F   )               | ![screenshot](readme/readme-media/htmlValidationHOME.png)                | Pass: No Errors                     |
+| About            | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fabout%2F)         | ![screenshot](readme/readme-media/htmlValidationABOUT.png)               | Pass: No Errors     |
+| Membership       | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fmembership%2F)              | ![screenshot](readme/readme-media/htmlValidationMEMBERSHIP.png)          | Pass: No Errors |
+| Fitness Classes  | [W3C]()| ![screenshot]()          | Pass: No Errors  |
+| GoFit Shop       | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fproducts%2F)     | ![screenshot](readme/readme-media/htmlValidationGOFITSHOP.png)     | Pass: No Errors                     |
+| Gallery          | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fgallery%2F)              | ![screenshot](readme/readme-media/htmlvalidationGALLERY.png)              | Pass: No Errors                     |
+| SignUP           | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Faccounts%2Fsignup%2F)              | ![screenshot](readme/readme-media/htmlValidationSIGNUP.png)              | Pass: No Errors                     |
+| LogIN            | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Faccounts%2Flogin%2F)              | ![screenshot](readme/readme-media/htmlValidationLOGIN.png)              | Pass: No Errors                     |
+| Membership Details| [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fmembership%2Fdetail%2F2%2F)              | ![screenshot](readme/readme-media/htmlValidationMEMDETAILS.png)              | Pass: No Errors                     |
+| Admin Add Membership | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+| Admin Edit Membership| [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+| Admin Add Fit Class  | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+| Admin Edit Fit Class | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+| Product Detail       | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+| Admin Add Product    | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+| Admin Edit Product   | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+| Admin/User Profile   | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+| Shop Bag             | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fbag%2F)              | ![screenshot](readme/readme-media/htmlValidationBAG.png)              | Pass: No Errors                     |
+| Checkout Bag         | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fcheckout%2F)              | ![screenshot](readme/readme-media/htmlValidationCHECKOUT.png)              | Pass: No Errors                     |
+| Checkout Success     | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fcheckout%2Fcheckout_success%2F3AAC9EF492AC4CCD809E9FC77074CA9F)              | ![screenshot](readme/readme-media/htmlValidationCHECKSUCC.png)              | Pass: No Errors                     |
+| 404 | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+| 403 | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
+
 
 ### CSS
 
