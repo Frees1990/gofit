@@ -3,11 +3,10 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.utils.http import urlencode
 
 from .models import Product, Category
 from .forms import ProductForm
-
-# Create your views here.
 
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
@@ -46,6 +45,13 @@ def all_products(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
+    # Prepare categories with URL-encoded names
+    all_categories = Category.objects.all()
+    category_links = [
+        {'name': category.name, 'url': urlencode({'category': category.name})}
+        for category in all_categories
+    ]
+
     current_sorting = f'{sort}_{direction}'
 
     context = {
@@ -53,9 +59,11 @@ def all_products(request):
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'category_links': category_links,
     }
 
     return render(request, 'products/products.html', context)
+
 
 
 def product_detail(request, product_id):
