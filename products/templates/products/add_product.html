@@ -25,13 +25,15 @@
                         <form method="POST" action="{% url 'add_product' %}" class="form mb-4" enctype="multipart/form-data">
                             {% csrf_token %}
                             
+                            <input type="hidden" name="next" value="{{ request.path }}">
+                            
                             {% for field in form %}
                                 {% if field.name == 'image' %}
                                     <div class="form-group">
                                         <label for="{{ field.id_for_label }}" class="form-label">Upload Image</label>
                                         <input type="file" name="{{ field.name }}" id="{{ field.id_for_label }}" class="form-control">
                                     </div>
-                                {% else %}
+                                {% elif field.name != 'next' %}
                                     <div class="form-group">
                                         {{ field | as_crispy_field }}
                                     </div>
