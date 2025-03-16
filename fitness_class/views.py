@@ -1,9 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth.decorators import login_required, user_passes_test
-from .models import FitnessClass, Booking
+from .models import FitnessClass
 from .forms import FitnessClassForm
 from django.utils.timezone import now
-from .forms import BookingForm
 
 @login_required
 def class_schedule(request):
@@ -14,22 +13,8 @@ def class_schedule(request):
     days = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat']
     class_by_day = [(day, classes.filter(day=day)) for day in days]
 
-    # If the request method is POST, try to save the booking
-    if request.method == 'POST':
-        form = BookingForm(request.POST)
-        if form.is_valid():
-            # Save the booking
-            booking = form.save(commit=False)
-            booking.user = request.user
-            booking.save()
-            # Optionally, you could send a success message or redirect to a confirmation page
-            return redirect('class_schedule')
-    else:
-        form = BookingForm()
-
     return render(request, 'fitness_class/schedule.html', {
-        'class_by_day': class_by_day,
-        'form': form
+        'class_by_day': class_by_day
     })
 
 
@@ -58,6 +43,7 @@ def add_class(request):
 
     return render(request, "fitness_class/add_class.html")
 
+
 @login_required
 @user_passes_test(is_admin)
 def edit_class(request, class_id):
@@ -71,6 +57,7 @@ def edit_class(request, class_id):
         form = FitnessClassForm(instance=fitness_class)
     return render(request, 'fitness_class/edit_class.html', {'form': form, 'fitness_class': fitness_class})
 
+
 @login_required
 @user_passes_test(is_admin)
 def delete_class(request, class_id):
@@ -79,14 +66,3 @@ def delete_class(request, class_id):
         fitness_class.delete()
         return redirect('class_schedule')
     return render(request, 'fitness_class/delete_class.html', {'fitness_class': fitness_class})
-
-def book_class(request, class_id):
-    fitness_class = FitnessClass.objects.get(id=class_id)  # Get the class by ID
-    user = request.user  # Get the logged-in user
-
-    if request.method == 'POST':
-        # Add the booking logic here (e.g., create a Booking instance)
-        Booking.objects.create(user=user, fitness_class=fitness_class)
-        return redirect('profile')  # Redirect to the user's profile after booking
-
-    return render(request, 'fitness_class/book_class.html', {'fitness_class': fitness_class})
