@@ -24,7 +24,7 @@
                     <div class="card-body">
                         <form method="POST" action="{% url 'add_product' %}" class="form mb-4" enctype="multipart/form-data">
                             {% csrf_token %}
-                            
+                            <input type="hidden" name="next" value="/products/add">
                             
                             {% for field in form %}
                                 {% if field.name == 'image' %}
@@ -38,7 +38,7 @@
                                     </div>
                                 {% endif %}
                             {% endfor %}
-                            
+                            <input type="hidden" name="next" value="/products/add">
                             <div class="form-group text-right">
                                 <a class="btn btn-outline-secondary rounded-0" href="{% url 'products' %}">Cancel</a>
                                 <button class="btn btn-primary rounded-0" type="submit">Add Product</button>
