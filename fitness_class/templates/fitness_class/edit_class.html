@@ -10,11 +10,42 @@
 {% endblock %}
 
 {% block content %}
-    <h1>Edit Fitness Class</h1>
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Save Class</button>
-    </form>
-    <a href="{% url 'class_schedule' %}">Back to Schedule</a>
+    <div class="d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 100px); padding-top: 20px;">
+        <div class="card shadow-lg w-100" style="max-width: 600px; background-color: rgba(255, 255, 255, 0.9); border-radius: 12px;">
+            <div class="card-body">
+                <h1 class="card-title text-center fw-bold">Edit Fitness Class</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <label for="id_name" class="form-label">Class Name</label>
+                        <input type="text" id="id_name" name="name" class="form-control" value="{{ form.name.value }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_day" class="form-label">Day</label>
+                        <select id="id_day" name="day" class="form-select">
+                            <option value="mon" {% if form.day.value == 'mon' %}selected{% endif %}>Monday</option>
+                            <option value="tue" {% if form.day.value == 'tue' %}selected{% endif %}>Tuesday</option>
+                            <option value="wed" {% if form.day.value == 'wed' %}selected{% endif %}>Wednesday</option>
+                            <option value="thu" {% if form.day.value == 'thu' %}selected{% endif %}>Thursday</option>
+                            <option value="fri" {% if form.day.value == 'fri' %}selected{% endif %}>Friday</option>
+                            <option value="sat" {% if form.day.value == 'sat' %}selected{% endif %}>Saturday</option>
+                            <option value="sun" {% if form.day.value == 'sun' %}selected{% endif %}>Sunday</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_start_time" class="form-label">Start Time</label>
+                        <input type="time" id="id_start_time" name="start_time" class="form-control" value="{{ form.start_time.value }}">
+                    </div>
+                    <div class="mb-3">
+                        <label for="id_end_time" class="form-label">End Time</label>
+                        <input type="time" id="id_end_time" name="end_time" class="form-control" value="{{ form.end_time.value }}">
+                    </div>
+                    <div class="text-center mt-3">
+                        <button type="submit" class="btn btn-primary btn-sm">Save Class</button>
+                        <a href="{% url 'class_schedule' %}" class="btn btn-secondary btn-sm">Back to Schedule</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
 {% endblock %}

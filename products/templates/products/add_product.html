@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block page_header %}
     <div class="container header-container">
@@ -13,35 +14,42 @@
 
 {% block content %}
     <div class="overlay"></div>
-    <div class="container d-flex justify-content-center align-items-center min-vh-100">
-        <div class="row w-100">
-            <div class="col-12 col-md-6">
-                <!-- Card wrapper with borders -->
-                <div class="card border-primary">
-                    <div class="card-header">
-                        <h5 class="card-title mb-0">Add Product</h5>
+
+    <div class="container d-flex justify-content-center align-items-center" style="min-height: calc(100vh - 100px); padding-top: 20px;">
+        <div class="row w-100 justify-content-center">
+            <div class="col-12 col-md-8">
+                <div class="card shadow-lg" style="background-color: rgba(255, 255, 255, 0.95); border-radius: 12px;">
+                    <div class="card-header text-center">
+                        <h5 class="fw-bold mb-0">Add Product</h5>
                     </div>
                     <div class="card-body">
-                        <form method="POST" action="{% url 'add_product' %}" class="form mb-4" enctype="multipart/form-data">
+                        <form method="POST" action="{% url 'add_product' %}" class="form" enctype="multipart/form-data">
                             {% csrf_token %}
                             <input type="hidden" name="next" value="{{ request.path }}">
-                            
+
                             {% for field in form %}
-                                {% if field.name == 'image' %}
-                                    <div class="form-group">
-                                        <label for="{{ field.id_for_label }}" class="form-label">Upload Image</label>
+                                <div class="mb-3">
+                                    <label for="{{ field.id_for_label }}" class="form-label fw-semibold">{{ field.label }}</label>
+                                    {% if field.name == 'image' %}
                                         <input type="file" name="{{ field.name }}" id="{{ field.id_for_label }}" class="form-control">
-                                    </div>
-                                {% elif field.name != 'next' %}
-                                    <div class="form-group">
-                                        {{ field | as_crispy_field }}
-                                    </div>
-                                {% endif %}
+                                    {% else %}
+                                        <input 
+                                            type="{{ field.field.widget.input_type }}" 
+                                            name="{{ field.name }}" 
+                                            id="{{ field.id_for_label }}" 
+                                            value="{{ field.value }}" 
+                                            class="form-control" 
+                                            placeholder="Enter {{ field.label }}">
+                                    {% endif %}
+                                    {% if field.errors %}
+                                        <div class="text-danger small">{{ field.errors }}</div>
+                                    {% endif %}
+                                </div>
                             {% endfor %}
-                            
-                            <div class="form-group text-right">
-                                <a class="btn btn-outline-secondary rounded-0" href="{% url 'products' %}">Cancel</a>
-                                <button class="btn btn-primary rounded-0" type="submit">Add Product</button>
+
+                            <div class="text-center mt-4">
+                                <button class="btn btn-primary btn-sm" type="submit">Add Product</button>
+                                <a class="btn btn-secondary btn-sm" href="{% url 'products' %}">Cancel</a>
                             </div>
                         </form>
                     </div>
@@ -54,7 +62,6 @@
 {% block postloadjs %}
     {{ block.super }}
     <script>
-        // JavaScript to handle image preview (optional)
         document.getElementById("id_image").addEventListener("change", function(event) {
             let file = event.target.files[0];
             if (file) {
