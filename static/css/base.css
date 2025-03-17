@@ -5,10 +5,13 @@ html {
 body {
     background: url('/media/gym.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 70vh;
+    height: 90vh;
     color: black;
     font-family: "Playfair", sans-serif;
     font-weight: 400;
+}
+.main-content {
+    padding-top: 120px; /* Matches the navbar height */
 }
 /* from Bulma */
 .icon {
@@ -156,34 +159,35 @@ a.category-badge > span.badge:hover {
 .remove-item {
     cursor: pointer;
 }
+
 .card-img-top {
-    max-width: 200px;
+    height: 200px;
+    width: 200px;
 }
 .product_name{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
     font-weight: 600;
 }
+/* Force card-footer to align consistently */
+.card-footer {
+    height: 60px;
+}
 /* Allauth form formatting */
-
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
 }
-
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
 }
-
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
-
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
-
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
@@ -252,7 +256,10 @@ h1 {
 footer {
     margin-top: auto; /* Pushes footer to the bottom */
 }
-
+.header-bg, .content-bg {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -277,10 +284,6 @@ footer {
     .header-container {
         padding-top: 200px;
     }
-    .card-img-top {
-        height: 250px;
-        width: 300px;
-    }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: large;
@@ -293,10 +296,6 @@ footer {
     }
     body{
         height: calc(100vh - 160vh);
-    }
-    .card-img-top {
-        height: 250px;
-        width: 300px;
     }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -322,11 +321,6 @@ footer {
         font-weight: 800;
         margin-bottom: 20px;
     }
-    .card-img-top {
-        height: 150px;
-        width: 200px;
-        margin-left: 15%;
-    }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: smaller;
@@ -343,7 +337,25 @@ footer {
         color: yellow;
         font-weight: 600;
     }
-    .hitmeup {
-        font-size: 1.5rem;  /* Smaller font size for smaller screens */
+
+    .lead, p {
+        font-size: 0.9rem;
+    }
+
+    .p-4 {
+        padding: 1rem !important;
+    }
+}
+@media (max-width: 400px) {
+    .display-4 {
+        font-size: 1.5rem;
+    }
+
+    .display-6 {
+        font-size: 1rem;
+    }
+
+    .lead, p {
+        font-size: 0.8rem;
     }
 }

@@ -156,35 +156,46 @@ a.category-badge > span.badge:hover {
 .remove-item {
     cursor: pointer;
 }
-.card-img-top {
-    height: 250px;
+.card-img-wrapper {
     width: 300px;
+    height: 250px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa; /* Optional: Add a background color */
+}
+
+.card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 .product_name{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
     font-weight: 600;
 }
+/* Force card-footer to align consistently */
+.card-footer {
+    height: 60px;
+}
 /* Allauth form formatting */
-
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
 }
-
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
 }
-
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
-
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
-
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
@@ -253,7 +264,10 @@ h1 {
 footer {
     margin-top: auto; /* Pushes footer to the bottom */
 }
-
+.header-bg, .content-bg {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 8px;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -278,10 +292,6 @@ footer {
     .header-container {
         padding-top: 200px;
     }
-    .card-img-top {
-        height: 250px;
-        width: 300px;
-    }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: large;
@@ -294,10 +304,6 @@ footer {
     }
     body{
         height: calc(100vh - 160vh);
-    }
-    .card-img-top {
-        height: 250px;
-        width: 300px;
     }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -323,11 +329,6 @@ footer {
         font-weight: 800;
         margin-bottom: 20px;
     }
-    .card-img-top {
-        height: 150px;
-        width: 200px;
-        margin-left: 15%;
-    }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: smaller;
@@ -346,5 +347,33 @@ footer {
     }
     .hitmeup {
         font-size: 1.5rem;  /* Smaller font size for smaller screens */
+    }
+    .display-4 {
+        font-size: 1rem;
+    }
+
+    .display-6 {
+        font-size: 1.2rem;
+    }
+
+    .lead, p {
+        font-size: 0.9rem;
+    }
+
+    .p-4 {
+        padding: 1rem !important;
+    }
+}
+@media (max-width: 400px) {
+    .display-4 {
+        font-size: 1.5rem;
+    }
+
+    .display-6 {
+        font-size: 1rem;
+    }
+
+    .lead, p {
+        font-size: 0.8rem;
     }
 }

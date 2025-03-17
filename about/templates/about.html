@@ -1,20 +1,12 @@
 {% extends "base.html" %}
 {% load static %}
 
-{% block page_header %}
-<div class="container-fluid bg-light py-5">
-    <div class="container text-center">
-        <h1 class="display-4">About GoFIT</h1>
-        <p class="lead">Empowering your journey to fitness and well-being.</p>
-    </div>
-</div>
-{% endblock %}
-
 {% block title %}About Us - GoFIT{% endblock %}
 
 {% block content %}
 <div class="overlay"></div>
-<div class="container py-5">
+<div class="main-content">
+    <div class="container py-5">
     
     <!-- Introduction Section -->
     <div class="text-center mb-5">
@@ -107,6 +99,7 @@
         <a href="{% url 'membership_list' %}" class="btn btn-primary btn-lg shadow px-5">
             View Memberships
         </a>
+    </div>
     </div>
 </div>
 {% endblock %}
