@@ -30,8 +30,6 @@ I have used the recommended [HTML W3C Validator](https://validator.w3.org) to va
 | Shop Bag             | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fbag%2F)              | ![screenshot](readme/readme-media/htmlValidationBAG.png)              | Pass: No Errors                     |
 | Checkout Bag         | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fcheckout%2F)              | ![screenshot](readme/readme-media/htmlValidationCHECKOUT.png)              | Pass: No Errors                     |
 | Checkout Success     | [W3C](https://validator.w3.org/nu/?doc=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2Fcheckout%2Fcheckout_success%2F3AAC9EF492AC4CCD809E9FC77074CA9F)              | ![screenshot](readme/readme-media/htmlValidationCHECKSUCC.png)              | Pass: No Errors                     |
-| 404 | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
-| 403 | [W3C]()              | ![screenshot]()              | Pass: No Errors                     |
 
 
 ### CSS
@@ -40,7 +38,7 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 
 | File      | Jigsaw URL                                                                                                       | Screenshot                                                  | Notes           |
 | --------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | --------------- |
-| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdougyb83.github.io%2FLunas-Leopard-Geckos) | ![screenshot](documentation/testing/css-validation-style.png) | Pass: No Errors |
+| style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](readme/readme-media/CSS.png) | Pass: No Errors |
 
 ## Browser Compatibility
 
@@ -48,11 +46,8 @@ I've tested my deployed project on multiple browsers to check for compatibility 
 
 | Browser | Screenshot                                             | Screenshot                                                   | Screenshot                                                 | Screenshot                                                     | Notes             |
 | ------- | ------------------------------------------------------ | ------------------------------------------------------------ | ---------------------------------------------------------- | -------------------------------------------------------------- | ----------------- |
-| Chrome  | ![screenshot](documentation/testing/browser-chrome.png)  | ![screenshot](documentation/testing/browser-chrome-avail.png)  | ![screenshot](documentation/testing/browser-chrome-faq.png)  | ![screenshot](documentation/testing/browser-chrome-contact.png)  | Works as expected |
-| Firefox | ![screenshot](documentation/testing/browser-firefox.png) | ![screenshot](documentation/testing/browser-firefox-avail.png) | ![screenshot](documentation/testing/browser-firefox-faq.png) | ![screenshot](documentation/testing/browser-firefox-contact.png) | Works as expected |
-| Edge    | ![screenshot](documentation/testing/browser-edge.png)    | ![screenshot](documentation/testing/browser-edge-avail.png)    | ![screenshot](documentation/testing/browser-edge-faq.png)    | ![screenshot](documentation/testing/browser-edge-contact.png)    | Works as expected |
-| Brave   | ![screenshot](documentation/testing/browser-brave.png)   | ![screenshot](documentation/testing/browser-brave-avail.png)   | ![screenshot](documentation/testing/browser-brave-faq.png)   | ![screenshot](documentation/testing/browser-brave-contact.png)   | Works as expected |
-| Opera   | ![screenshot](documentation/testing/browser-opera.png)   | ![screenshot](documentation/testing/browser-opera-avail.png)   | ![screenshot](documentation/testing/browser-opera-faq.png)   | ![screenshot](documentation/testing/browser-opera-contact.png)   | Works as expected |
+| Edge  | ![screenshot](readme/readme-media/EDGEGALLERY.png)  | ![screenshot](readme/readme-media/EDGEHOME.png)  | ![screenshot](readme/readme-media/EDGEMEM.png)  | ![screenshot](readme/readme-media/EDGESHOP.png)  | Works as expected |
+| Chrome    | ![screenshot](readme/readme-media/CHROMEGALLERY.png)    | ![screenshot](readme/readme-media/CHROMEHOME.png)    | ![screenshot](readme/readme-media/CHROMEMEM.png)    | ![screenshot](readme/readme-media/CHROMESHOP.png)    | Works as expected |
 
 ## Responsiveness
 
