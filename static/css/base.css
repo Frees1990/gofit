@@ -1,17 +1,27 @@
 html {
     height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 body {
     background: url('/media/gym.jpg') no-repeat center center fixed;
     background-size: cover;
-    height: 90vh;
+    height: 70vh;
     color: black;
     font-family: "Playfair", sans-serif;
     font-weight: 400;
 }
 .main-content {
-    padding-top: 120px; /* Matches the navbar height */
+    flex: 1;
+    min-height: calc(100vh - 160px); /* Adjust 160px based on header/footer height */
+    margin-top: 120px; /* Adjust as needed based on your navbar height */
+}
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: #333; /* Example background */
+    color: white;
 }
 /* from Bulma */
 .icon {
@@ -159,35 +169,35 @@ a.category-badge > span.badge:hover {
 .remove-item {
     cursor: pointer;
 }
-
 .card-img-top {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 300px;
 }
 .product_name{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: large;
     font-weight: 600;
 }
-/* Force card-footer to align consistently */
-.card-footer {
-    height: 60px;
-}
 /* Allauth form formatting */
+
 .allauth-form-inner-content p {
     margin-top: 1.5rem; /* mt-4 */
     color: #6c757d; /* text-secondary */
 }
+
 .allauth-form-inner-content input {
     border-color: #000;
     border-radius: 0;
 }
+
 .allauth-form-inner-content label:not([for='id_remember']) {
     display: none;
 }
+
 .allauth-form-inner-content input::placeholder {
     color: #aab7c4;
 }
+
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
 	/* btn */
@@ -253,13 +263,7 @@ a.category-badge > span.badge:hover {
 h1 {
     font-weight: bold !important;
 }
-footer {
-    margin-top: auto; /* Pushes footer to the bottom */
-}
-.header-bg, .content-bg {
-    background-color: rgba(0, 0, 0, 0.4);
-    border-radius: 8px;
-}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -284,10 +288,17 @@ footer {
     .header-container {
         padding-top: 200px;
     }
+    .card-img-top {
+        height: 250px;
+        width: 300px;
+    }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
         font-size: large;
         font-weight: 600;
+    }
+    .hitmeup {
+        font-size: 1.5rem;  /* Smaller font size for smaller screens */
     }
 }
 @media (min-width: 600px) and (max-width: 992px) {
@@ -296,6 +307,10 @@ footer {
     }
     body{
         height: calc(100vh - 160vh);
+    }
+    .card-img-top {
+        height: 250px;
+        width: 300px;
     }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -306,6 +321,9 @@ footer {
         font-size: x-large;
         font-weight: 800;
         margin-bottom: 20px;
+    }
+    .hitmeup {
+        font-size: 1.5rem;  /* Smaller font size for smaller screens */
     }
 }
 /* pad the top a bit when navbar is collapsed on mobile */
@@ -320,6 +338,11 @@ footer {
         font-size: large;
         font-weight: 800;
         margin-bottom: 20px;
+    }
+    .card-img-top {
+        height: 150px;
+        width: 200px;
+        margin-left: 15%;
     }
     .product_name{
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -337,25 +360,7 @@ footer {
         color: yellow;
         font-weight: 600;
     }
-
-    .lead, p {
-        font-size: 0.9rem;
-    }
-
-    .p-4 {
-        padding: 1rem !important;
-    }
-}
-@media (max-width: 400px) {
-    .display-4 {
-        font-size: 1.5rem;
-    }
-
-    .display-6 {
-        font-size: 1rem;
-    }
-
-    .lead, p {
-        font-size: 0.8rem;
+    .hitmeup {
+        font-size: 1.5rem;  /* Smaller font size for smaller screens */
     }
 }

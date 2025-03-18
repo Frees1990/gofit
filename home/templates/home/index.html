@@ -10,29 +10,15 @@
 {% endblock %}
 
 {% block content %}
-    <div class="container h-100">
-        <div class="row h-100">
-            <div class="col-10 col-md-6 my-auto">
+    <div class="container main-content">
+        <div class="row">
+            <div class="col-10 col-md-6 my-auto ">
                 <div class="">
-                    <h1 class="display-4 text-white hitmeup">
+                    <h1 class="display-4 text-center text-white hitmeup">
                         Start Your Fitness Journey With Us!!
                     </h1>
                 </div>
             </div>
         </div>
     </div>
-{% endblock %}
-
-{% block extra_styles %}
-    <style>
-        /* Media query for screens smaller than 600px */
-        @media (max-width: 600px) {
-            .hitmeup {
-                font-size: 1.5rem; /* Smaller font size for smaller screens */
-                text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Stronger shadow for better visibility */
-                letter-spacing: 2px; /* Slight letter spacing for emphasis */
-                font-weight: 900; /* Bolder text */
-            }
-        }
-    </style>
 {% endblock %}
