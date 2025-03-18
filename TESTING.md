@@ -40,6 +40,11 @@ I have used the recommended [CSS Jigsaw Validator](https://jigsaw.w3.org/css-val
 | --------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------- | --------------- |
 | style.css | [Jigsaw](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fgofit-d18fb7690928.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en) | ![screenshot](readme/readme-media/CSS.png) | Pass: No Errors |
 
+
+### JS
+![screenshot](readme/readme-media/JS1.png) 
+![screenshot](readme/readme-media/JS2.png) 
+
 ## Browser Compatibility
 
 I've tested my deployed project on multiple browsers to check for compatibility issues.
