@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+
+    /* Fix navbar overlap issue */
+    .content-wrapper {
+        margin-top: 80px; /* Adjust based on your navbar height */
+    }
+
+    /* Card styling */
+    .order-card {
+        background: rgba(255, 255, 255, 0.95); /* Slight transparency */
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+    }
+</style>
+
+<div class="overlay"></div>
+
+<div class="container content-wrapper">
+    <h2 class="text-center mb-4">Order History</h2>
+
+    {% if order %}
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card order-card">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">Order #{{ order.order_number }}</h5>
+                        <p class="text-muted text-center">Date: {{ order.date|date:"F d, Y" }}</p>
+                        
+                        <hr>
+
+                        <h6 class="mb-3"><strong>Order Summary</strong></h6>
+                        <ul class="list-group mb-3">
+                            {% for item in order.lineitems.all %}
+                                <li class="list-group-item d-flex justify-content-between align-items-center">
+                                    {{ item.product.name }} (x{{ item.quantity }})
+                                    <span class="text-success">£{{ item.lineitem_total }}</span>
+                                </li>
+                            {% endfor %}
+                        </ul>
+
+                        <h6 class="mb-3"><strong>Billing Information</strong></h6>
+                        <p><strong>Full Name:</strong> {{ order.full_name }}</p>
+                        <p><strong>Email:</strong> {{ order.email }}</p>
+                        <p><strong>Phone:</strong> {{ order.phone_number }}</p>
+                        <p><strong>Address:</strong> {{ order.street_address1 }}, {{ order.street_address2 }}</p>
+                        <p><strong>City:</strong> {{ order.town_or_city }}, {{ order.county }}</p>
+                        <p><strong>Postcode:</strong> {{ order.postcode }}</p>
+                        <p><strong>Country:</strong> {{ order.country }}</p>
+
+                        <hr>
+
+                        <h6 class="mb-3"><strong>Order Total</strong></h6>
+                        <p class="lead font-weight-bold text-center text-primary">€{{ order.grand_total }}</p>
+
+                        <div class="text-center mt-4">
+                            <a href="{% url 'profile' %}" class="btn btn-outline-primary">Back to Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <div class="alert alert-warning text-center" role="alert">
+            No order history found.
+        </div>
+    {% endif %}
+</div>
+{% endblock %}

@@ -23,11 +23,6 @@ My Site is a combination of Gym Membership and Health Shop where they could See 
     - [**Landing Page**](#landing-page)
     - [**Footer**](#footer)
     - [**Future Features**](#future-features)
-  - [**Testing**](#testing)
-    - [**HTML Validatior Test**](#html-validatior-test)
-    - [**CSS Validator Test**](#css-validator-test)
-    - [**Lighthouse Mobile**](#lighthouse-mobile)
-    - [**Libraries and Progransms used**](#libraries-and-progransms-used)
   - [**Deployment & Usage**](#deployment--usage)
     - [**Deployment**](#deployment)
   - [**Credits**](#credits)
@@ -111,46 +106,6 @@ Site Goal is to provide a one stop shop for Gym Goers the site offers a wide ran
 
 ### **Language Used**
   - English 
-
-## **Testing**
-### Bugs and Issues
-
-  - #### Code Issues
-    
-- Allauth installation was not installing even with the 0.41.0 , student care was able to assist me with the providing the most updated      allauth which was the 54.0
-
-- Image was not loading because staticfiles path was not a tuple
-
-- Forgot to double the underscore in the views.py to show the categories, only had one underscore causing it to show an error. Had to recheck the walkthrough to compare my work and realized I missed the 2nd underscore. 
-
-- The Sort drop down did not work, realized that I was in the wrong version of bootsrap. Changed my version from 5.0 to 4.6 and used the code from this version and the dropped down worked. 
-
-- When trying to deploy my work to heroku I get an fail to deploy. I googled everywhere but it keeps saying that I did not set up the s3 and iam correctly so I followed the video again and it still getting the same error. I immidietly contacted student support who gave me the updated steps to do the s3 and Iam, this has resolved trhe issue I have been having. 
-
-- The images in my GoFit products are not showing thinking it might have been the url but it isnt. It showing a appended data. What I did is I went to the admin django and removed the image that is currently there and replaced it with the one that is not appended it resolve the issues.
-
-- The imahes in my Facility Gallery are also not showing found out that it is hard coded reason why it showing in local but not the deployed one. tutor support rebecca told me to add this format  {{ MEDIA_URL }}image_name.png but still was not working so 
-
-- remove option was not working, having to look at what was missing on my code. The only thing that solved the problem  was correcting a typo on the script source.
-
-- update and remove button are not working in the deployed site but are working on the local host , I did not do any changes with this resolved by refreshing multiple times and closing the gitpos dev env.
-
-- The scroll up and down in toast is not working - This resolved itself overtime, I somehow made it work but could not figure out what I change to make it work. 
-
-- PROBLEM TO SOLVE"  Stripe Payment field is not showing, this was a miss on my end, it was showing but I could not see it because it was behind the background image. I found out about it when I did a dev tools inspecting it. 
-
-- After installing pip3 install django-countries==7.2.1 and editing the models, tried migrating and it keeps getting this error 
-   ![Error](readme/readme-media/errors.png)
-   ![Edit](readme/readme-media/editmigration1.png)
-  ![Edit2](readme/readme-media/editmigration2.png)
-    
- googled this issue and after hours of searching I found this 
-
-  https://stackoverflow.com/questions/8484689/django-form-database-error-value-too-long-for-type-character-varying4
-
-- I could not find what he was saying column max lenght but did find this
-I wasn't too sure waht I need to put in there but research about it but couldnt find anything so I bit my tongue and just changed it to 1000 and did the migrate and it WORKED I checked botique ado migrations and its still oon 2 so I was wondering what could have caused it. I changed it back to 2 for now and will have a look into it when I have more time in my hands. 
-#PROBLEM TO SOLVE = SIGN UP DOS NOT DIRECT YOU TO THE VERIFY EMAIL PAGE BUT DIRECTS YOU TO THJE MAIN PAGE. EVERYTHIONG LOOKS OKAY BUT FIGURE IT OUT LATER 
 
 ## **Libraries and Programs used**
 -  Bootstrap

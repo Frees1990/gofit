@@ -18,26 +18,25 @@ def profile(request):
 
         if form.is_valid():
             form.save()
-            request.user.email = request.POST.get('email')  # Save updated email
-            request.user.save()
+            email = request.POST.get('email')
+            if email:
+                request.user.email = email
+                request.user.save()
             messages.success(request, "Profile updated successfully!")
-        else:
-            messages.error(request, "Failed to update profile. Please ensure the form is valid.")
+            return redirect('profile')
 
         if password_form.is_valid():
             user = password_form.save()
-            update_session_auth_hash(request, user)  # Prevents logout after password change
+            update_session_auth_hash(request, user)
             messages.success(request, "Your password has been updated successfully!")
             return redirect('profile')
-        else:
-            messages.error(request, "Failed to update password. Please check the form.")
 
     else:
         form = UserProfileForm(instance=profile)
         password_form = PasswordChangeForm(request.user)
 
-    # Get user's order history
-    orders = profile.orders.all()
+    # ✅ Corrected order query
+    orders = Order.objects.filter(user_profile=profile)
 
     template = 'profiles/profile.html'
     context = {
